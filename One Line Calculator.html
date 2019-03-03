@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#formStyle {
+			font-size: 20px;
+			font-family: verdana;
+		}
+		.button {
+		  background-color: white;
+		  border: thick;
+		  border-color: black;
+		  color: black;
+		  padding: 15px 20px;
+		  text-align: center;
+		  font-size: 32px;
+		  margin: 4px 2px;
+		}
+	</style>
+	<title>One Line Calculator</title>
+</head>
+<body>
+	<div id = "formStyle" style = "text-align:center">
+		<form name = "example">
+			<br><br>
+			<br><br>
+			<br><br>
+		Enter Value : <input style = "height:30px;font-size: 20px" type = "text" size = "50" name = "calculator"> <br><br>
+		<input type = "button" class = "button" name = "B1" value ="Calculate" onclick = "cal()"> <br><br>
+		<input type = "reset" class = "button" name = "B2" value = "Reset"> <br><br>
+		Answer : <input style = "height:30px" type = "text" size = "50" name = "answer"> <br><br>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function cal() {
+		document.example.answer.value = 
+		eval(document.example.calculator.value);
+	}
+</script>
+</html>

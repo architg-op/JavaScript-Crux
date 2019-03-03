@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+		background-color : #3498db;
+		text-align: center;
+	}
+	.p01 {
+		font-size: 40px;
+		color: white;
+	}
+	hr {
+		color: white;
+	}
+	ol {
+		list-style: none;
+		margin-top: 2rem;
+		border-top : white;
+	}
+	li {
+		border-bottom: 1px solid white;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	</style>
+	<title>To-Do-List</title>
+</head>
+<body>
+	<h1> Welcome to To-Do-List App </h1> <br><br>
+	<form name = "myForm">
+		<h3>Enter Task:</h3>  <input type = "text" style = "height: 30px;font-size: 30px" id = "it" size = "50"> <br>
+		<input type = "button" name = "add" value = "Add" onclick = "addItem()">
+		<br>
+		<hr>
+		<div class = "p01">
+			<ol id = "toDoList"> </ol> 
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	function addItem() {
+		var item = document.getElementById('it').value;
+		var text = document.createTextNode(item);
+		var newitem = document.createElement("li");
+		newitem.append(text);
+		document.getElementById('toDoList').appendChild(newitem);
+	}
+</script>
+</html>
